@@ -31,7 +31,7 @@ export default {
 		}
 	},
 	mounted() {
-		console.log("7788listmounted") 
+		//console.log("7788listmounted") 
 	},
 	computed:{
 		/**
@@ -68,7 +68,7 @@ export default {
 			for(let i =0;i<this.cols.length;i++){
 				colstmp[this.cols[i]["name"]]=this.cols[i]
 			}
-			if(this.isdebug)console.log(colstmp)
+			//if(this.isdebug)console.log(colstmp)
 			return colstmp
 		},
 		qqservicesurl(){
@@ -106,10 +106,8 @@ export default {
 		/**
 		 * 提交表单
 		 */
-		submit(ref){
-			 
-			this.$refs[ref].validate().then(res => { 
-				 
+		submit(ref){ 
+			this.$refs[ref].validate().then(res => {  
 				this.$emit("savedata",{
 					formData:this.formData
 				},(err,res)=>{ 
@@ -170,8 +168,7 @@ export default {
 					return
 				 }  
 				 
-				 this.$refs.paging.complete(res);
-				  
+				 this.$refs.paging.complete(res); 
 			 }) 
 		}, 
 	}		

@@ -15,7 +15,7 @@
 				</view> 
 				<view class="query flex-direction-row">
 					<uni-text>止日期:</uni-text>
-					<input class="uni-input query-input" focus v-model="querystart"/> 
+					<input class="uni-input query-input" focus v-model="queryend"/> 
 					<button @click="queryQuery" class="query-but" type="primary" >查找</button>
 				</view>
 				</view> 
@@ -33,7 +33,7 @@
 	export default {
 		props:{
 			url: {type:String,default:"apinet/personal/personal_rmbhistory"},  //必须 api调用
-			getm: {type:String,default:'get'},//get方法可自定义 真实调用url+getm
+			getm: {type:String,default:'getByWeb'},//get方法可自定义 真实调用url+getm
 			topText: {type:String,default:'778878net荣誉出品'},
 			isdebug: {type:Boolean,default:true},
 			listSet:{type:Array,default:()=>[
@@ -60,6 +60,7 @@
 		data() {
 			return { 
 				querystart:'1900-01-01',
+				queryend:'2099-01-01',
 				rules:   {
 					// 对name字段进行必填验证
 					kind: {
@@ -130,16 +131,7 @@
 				})
 			}, 
 		 
-			typeChange(e){//类型切换
-				let index = e.currentTarget.dataset.index
-				this.typeData.value = index
-				this.typeData.range.map((item)=>{
-					if(item.value == index){
-						this.typeData.textValue = item.text
-						return
-					}
-				})
-			},
+		 
 			queryQuery(){
 				this.$refs.list78.queryQueryIn();
 			},
@@ -152,10 +144,10 @@
 					//pars:this.pars,
 					getstart:(pageNo-1)*pageSize,
 					getnumber:pageSize, 
-					isdebug:false
+					isdebug:true
 				} 
 				if(orderby)settingin2["order"]=orderby
-			 	//settingin2.pars =[this.rateInputValue, this.typeData.textValue,this.tbtime,this.queryInputValue];
+			 	settingin2["pars"] =[this.querystart, this.queryend ];
 				//['5.2','steambuff',"1999-01-01 00:00:00",'沙漠之鹰'], 
 				 //
 				Object.assign(settingin2, this.getmPars); 

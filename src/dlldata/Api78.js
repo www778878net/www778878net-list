@@ -1,6 +1,6 @@
 
 import String78 from "./String78"
-import Promise78 from '@www778878net/promise78'
+import Promise78 from '@/dllbase/Promise78'
  
 
 
@@ -38,7 +38,7 @@ export default class Api78 {
 			//jsonbase64: 1,//已默认 pars cols数组转为字符 
 			//system: "guest",//微服务名称 ex:view food
 			isTest: true,//本地测试加上域名
-			testhost:"http://uniapp.778878.net",//本地调试域名
+			testhost:"http://erp.778878.net",//本地调试域名
 			isdebug: false,//是否打印调试信息
 			pars:[],//参数每次不一样 有可能不传过来
 		}	;
@@ -175,7 +175,7 @@ export default class Api78 {
 		if (this.settings.isTest)
 			urlapi=this.settings.testhost+urlapi
 		if(this.settings.isdebug)console.log(urlapi);
-			
+		if(this.settings.isdebug)console.log(data);	
 		 
 		uni.request({
 		    url: urlapi,  
