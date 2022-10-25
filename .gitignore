@@ -24,7 +24,7 @@ yarn-error.log*
 /.vs/uniapp/FileContentIndex
 *.sqlite
 *.lock
-/dist/build/.automator/h5
+/dist/
 /.vs/www778878net-list/FileContentIndex
 /.vs/www778878net-list/FileContentIndex
 /.vs
