@@ -1,18 +1,19 @@
 {
-  "id": "uni-data-select",
-  "displayName": "uni-data-select 下拉框选择器",
-  "version": "0.1.9",
-  "description": "通过数据驱动的下拉框选择器",
+  "id": "uni-badge",
+  "displayName": "uni-badge 数字角标",
+  "version": "1.2.1",
+  "description": "数字角标（徽章）组件，在元素周围展示消息提醒，一般用于列表、九宫格、按钮等地方。",
   "keywords": [
+    "",
+    "badge",
     "uni-ui",
-    "select",
-    "uni-data-select",
-    "下拉框",
-    "下拉选"
+    "uniui",
+    "数字角标",
+    "徽章"
 ],
   "repository": "https://github.com/dcloudio/uni-ui",
   "engines": {
-    "HBuilderX": "^3.1.1"
+    "HBuilderX": ""
   },
   "directories": {
     "example": "../../temps/example_temps"
@@ -38,7 +39,7 @@
     "type": "component-vue"
   },
   "uni_modules": {
-    "dependencies": ["uni-load-more"],
+    "dependencies": ["uni-scss"],
     "encrypt": [],
     "platforms": {
       "cloud": {
@@ -47,8 +48,8 @@
       },
       "client": {
         "App": {
-          "app-vue": "u",
-          "app-nvue": "n"
+          "app-vue": "y",
+          "app-nvue": "y"
         },
         "H5-mobile": {
           "Safari": "y",
@@ -65,15 +66,14 @@
         },
         "小程序": {
           "微信": "y",
-          "阿里": "u",
-          "百度": "u",
-          "字节跳动": "u",
-        "QQ": "u",
-        "京东": "u"
+          "阿里": "y",
+          "百度": "y",
+          "字节跳动": "y",
+          "QQ": "y"
         },
         "快应用": {
-          "华为": "u",
-          "联盟": "u"
+          "华为": "y",
+          "联盟": "y"
         },
         "Vue": {
             "vue2": "y",

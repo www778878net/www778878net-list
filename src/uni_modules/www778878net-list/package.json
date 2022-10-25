@@ -1,16 +1,20 @@
 {
   "id": "www778878net-list",
-  "displayName": "www778878net-list",
-  "version": "0.0.1",
-  "description": "www778878net-list",
+  "displayName": "www778878net-list 低代码列表",
+  "version": "1.0.0",
+  "description": "List 低代码列表 ，帮助使用者快速构建列表。",
   "keywords": [
-    "www778878net-list"
+    "www778878net-list","list","列表","uni-ui","uniui"
 ],
-  "repository": "",
+  "repository": "https://github.com/www778878net/www778878net-list",
   "engines": {
     "HBuilderX": "^3.1.0"
   },
   "dcloudext": {
+  "category": [
+	"前端组件",
+	"通用组件"
+  ],
     "type": "component-vue",
     "sale": {
       "regular": {
@@ -31,51 +35,54 @@
     "npmurl": ""
   },
   "uni_modules": {
-    "dependencies": [],
+    "dependencies": [
+		"uni-nav-bar"
+		,"z-paging"
+		,"uni-list"
+		,"uni-popup"
+		,"uni-forms"
+		,"uni-card"
+	],
     "encrypt": [],
-    "platforms": {
-      "cloud": {
-        "tcb": "u",
-        "aliyun": "u"
-      },
-      "client": {
-        "Vue": {
-          "vue2": "u",
-          "vue3": "u"
-        },
-        "App": {
-          "app-vue": "u",
-          "app-nvue": "u"
-        },
-        "H5-mobile": {
-          "Safari": "u",
-          "Android Browser": "u",
-          "微信浏览器(Android)": "u",
-          "QQ浏览器(Android)": "u"
-        },
-        "H5-pc": {
-          "Chrome": "u",
-          "IE": "u",
-          "Edge": "u",
-          "Firefox": "u",
-          "Safari": "u"
-        },
-        "小程序": {
-          "微信": "u",
-          "阿里": "u",
-          "百度": "u",
-          "字节跳动": "u",
-          "QQ": "u",
-          "钉钉": "u",
-          "快手": "u",
-          "飞书": "u",
-          "京东": "u"
-        },
-        "快应用": {
-          "华为": "u",
-          "联盟": "u"
-        }
-      }
-    }
-  }
-}
+   "platforms": {
+         "cloud": {
+           "tcb": "y",
+           "aliyun": "y"
+         },
+         "client": {
+           "App": {
+             "app-vue": "y",
+             "app-nvue": "y"
+           },
+           "H5-mobile": {
+             "Safari": "y",
+             "Android Browser": "y",
+             "微信浏览器(Android)": "y",
+             "QQ浏览器(Android)": "y"
+           },
+           "H5-pc": {
+             "Chrome": "y",
+             "IE": "y",
+             "Edge": "y",
+             "Firefox": "y",
+             "Safari": "y"
+           },
+           "小程序": {
+             "微信": "y",
+             "阿里": "y",
+             "百度": "y",
+             "字节跳动": "y",
+             "QQ": "y"
+           },
+           "快应用": {
+             "华为": "u",
+             "联盟": "u"
+           },
+           "Vue": {
+               "vue2": "y",
+               "vue3": "y"
+           }
+         }
+       }
+     }
+   }

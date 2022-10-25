@@ -1,8 +1,26 @@
 {
-  "name": "0927hello",
+  "name": "@www778878net/list",
   "version": "0.1.0",
-  "private": true,
+  "description": "www778878net-list 低代码列表 ，帮助使用者快速构建列表。",
+  "author": {
+    "name": "Frieda.Hu<657225485@qq.com>"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/www778878net/www778878net-list.git"
+  },
+  "keywords": [
+    "www778878net-list",
+    "list",
+    "列表",
+    "uni-ui",
+    "uniui"
+  ],
+  "license": "Apache-2.0",
   "scripts": {
+    "upgrade78": "yarn-upgrade-all",
+    "postpublish": "git push origin --all && git push origin --tags",
+    "postversion": "npm publish --access public",
     "serve": "npm run dev:h5",
     "build": "npm run build:h5",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
