@@ -1,0 +1,5 @@
+@import '@/uni_modules/uni-icons/components/uni-icons/uniicons.css';
+@font-face {
+	font-family: uniicons;
+	src: url('@/uni_modules/uni-icons/components/uni-icons/uniicons.ttf') format('truetype');
+}
