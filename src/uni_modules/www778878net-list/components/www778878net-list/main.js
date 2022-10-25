@@ -20,7 +20,12 @@ export default {
 		cols:Array, //表单数据
 		rules:{},//校验规则
 		topText:{type:String,default:'778878net荣誉出品(可替换这行字显示点有用的)'},
-		//filter:{},//搜索条件
+		title:{type:String,default:'778878net列表控件'},
+		
+		isCanFind:{type:Boolean,default:false},//是否允许查找 
+		isCanAdd:{type:Boolean,default:false},//是否允许新增 
+		isRowModify:{type:Boolean,default:false},//是否允许行修改
+		isRowDel:{type:Boolean,default:false},//是否允许行删除
 		isdebug:{type:Boolean,default:true},//打印调试 
 	},
 	data(){
@@ -76,6 +81,18 @@ export default {
 		}
 	},
 	methods: {
+		back() {
+			if (getCurrentPages().length > 1) { 
+				uni.navigateBack({
+					delta: 1
+				}) 
+			} else {
+				uni.redirectTo({
+					url: '/pages/index/index'
+				})
+			}
+		
+		}, 
 		formdel(id){
 			if(this.isdebug)console.log(id)
 			if (!id || !id.length) {

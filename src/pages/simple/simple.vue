@@ -1,7 +1,6 @@
 <template>
 	<view class="page-content">
-		<uni-nav-bar dark :fixed="true" shadow background-color="#007AFF" status-bar left-icon="left"
-			title="游戏" @clickLeft="back" />
+ 
 		<www778878net-list ref="list78" @getdata="getdata" :cols="cols"  
 			:topText="topText" :listSet="listSet" :helptexts="helptexts" 
 		   >

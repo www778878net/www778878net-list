@@ -1,10 +1,12 @@
 <template>
 	<view class="page-content">
-		<uni-nav-bar dark :fixed="true" shadow background-color="#007AFF" status-bar left-icon="left"
-			title="游戏" @clickLeft="back" />
+		
 		<www778878net-list ref="list78" @queryQuery="queryQuery" :cols="cols" :rules="rules"
 		   @getdata="getdata" @savedata="savedata" @delById="delById"
 			:topText="topText" :listSet="listSet" :helptexts="helptexts" 
+			:isCanFind="isCanFind" :isCanAdd="isCanAdd"
+			:isRowModify="isRowModify" :isRowDel="isRowDel"
+			:title="title"
 		   >
 			<template v-slot:find>
 				<view class="screen-box">
@@ -52,7 +54,11 @@
 				{ name: "kind2", head: '类别2' }				 
 				],
 			},
-		
+			title: {type:String,default:'列表控件778878net'},
+			isCanFind:{type:Boolean,default:true},//是否允许查找
+			isCanAdd:{type:Boolean,default:true},//是否允许新增 
+			isRowModify:{type:Boolean,default:true},//是否允许行修改
+			isRowDel:{type:Boolean,default:true},//是否允许行删除
 			helptexts:{type:Array,default:()=>[".public参数000",".腾迅云 阿里云均可更新" ]
 			},
 		
@@ -125,11 +131,7 @@
 				 
 				callback(err,res["back"])
 			},
-			back() {
-				uni.navigateBack({
-					delta: 1
-				})
-			}, 
+		
 		 
 		 
 			queryQuery(){
