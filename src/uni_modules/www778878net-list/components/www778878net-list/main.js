@@ -15,8 +15,7 @@ export default {
 	emits:['getdata','queryQuery','savedata','delById'],
 	props:{		
 		listSet:Array,//列表格式设置
-		helptexts:Array,//帮助文本
-		qqservices:"657225485",//客服qq
+		helptexts:Array,//帮助文本 
 		cols:Array, //表单数据
 		rules:{},//校验规则
 		topText:{type:String,default:'778878net荣誉出品(可替换这行字显示点有用的)'},
@@ -26,7 +25,7 @@ export default {
 		isCanAdd:{type:Boolean,default:false},//是否允许新增 
 		isRowModify:{type:Boolean,default:false},//是否允许行修改
 		isRowDel:{type:Boolean,default:false},//是否允许行删除
-		isdebug:{type:Boolean,default:true},//打印调试 
+		isdebug:{type:Boolean,default:false},//打印调试 
 	},
 	data(){
 		return{ 

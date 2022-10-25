@@ -37,7 +37,7 @@
 			url: {type:String,default:"apinet/personal/personal_rmbhistory"},  //必须 api调用
 			getm: {type:String,default:'getByWeb'},//get方法可自定义 真实调用url+getm
 			topText: {type:String,default:'778878net荣誉出品'},
-			isdebug: {type:Boolean,default:true},
+			//isdebug: {type:Boolean,default:true},
 			listSet:{type:Array,default:()=>[
 				{colleft:{name:"ddate",head:"日期:"}},
 				{colleft:{name:"kind",head:"类别:"},
@@ -91,7 +91,7 @@
 					url:this.url,// "api7819/services/Services78",
 					m:  "del",  
 					mid:id,
-					isdebug:true
+					isdebug:false
 				} 
 				if(this.isdebug)console.log(settingin2)
 				let [err,res]=await api.doAsyc(settingin2)
@@ -146,7 +146,7 @@
 					//pars:this.pars,
 					getstart:(pageNo-1)*pageSize,
 					getnumber:pageSize, 
-					isdebug:true
+					isdebug:false
 				} 
 				if(orderby)settingin2["order"]=orderby
 			 	settingin2["pars"] =[this.querystart, this.queryend ];

@@ -45,7 +45,7 @@
 					{{rowtext}}
 				</view> 
 				<view class="help-row">
-					<a :href="qqservicesurl" target="_blank">  <img title="点此联系客服" border="0" alt="点此联系客服" src="@/static/image/pa.gif"> </a>
+					<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=IGEbSpBveycfGNzhBnAdyS3eU-rqXf3d&jump_from=webapi&authKey=tfpHY+ASwWfJCvBuiW6c+Ifrsai8zJBPfLGr83M6r67OJxODwaKQx1O0oHC4KCS9"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="7788开源用户群" title="7788开源用户群"></a>
 				</view>
 			</view>
 		</uni-popup>

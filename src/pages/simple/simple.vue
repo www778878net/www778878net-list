@@ -2,7 +2,7 @@
 	<view class="page-content">
  
 		<www778878net-list ref="list78" @getdata="getdata" :cols="cols"  
-			:topText="topText" :listSet="listSet" :helptexts="helptexts" 
+			 :listSet="listSet" :helptexts="helptexts" 
 		   >
 		 
 		</www778878net-list>
@@ -10,15 +10,13 @@
 </template>
 
 <script  >
-	import Api78 from '@/dlldata/Api78'
-	import Toast78 from '@/dllinfo/Toast78'
-	let api=new Api78()
+	 
 	
  
 	export default {
 		props:{ 
-			topText: {type:String,default:'778878net荣誉出品'},
-			isdebug: {type:Boolean,default:true},
+			//topText: {type:String,default:'778878net荣誉出品'},
+			//isdebug: {type:Boolean,default:false},
 			listSet:{type:Array,default:()=>[
 				{colleft:{name:"ddate",head:"日期:"}},
 				{colleft:{name:"kind",head:"类别:"},
@@ -47,12 +45,7 @@
 		mounted() {
 			 
 		},
-		methods: {  
-			back() {
-				uni.navigateBack({
-					delta: 1
-				})
-			},  
+		methods: {   
 		 
 			async getdata(getpars,callback){
 				console.log(getpars)
