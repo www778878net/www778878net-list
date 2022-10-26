@@ -1,20 +1,20 @@
 {
   "id": "www778878net-list",
   "displayName": "www778878net-list 低代码列表",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "List 低代码列表 ，帮助使用者快速构建列表。",
   "keywords": [
-    "www778878net-list","list","列表","uni-ui","uniui"
+    "www778878net-list",
+    "list",
+    "列表",
+    "uni-ui",
+    "uniui"
 ],
   "repository": "https://github.com/www778878net/www778878net-list",
   "engines": {
     "HBuilderX": "^3.1.0"
   },
-  "dcloudext": {
-  "category": [
-	"前端组件",
-	"通用组件"
-  ],
+"dcloudext": {
     "type": "component-vue",
     "sale": {
       "regular": {
@@ -28,9 +28,9 @@
       "qq": ""
     },
     "declaration": {
-      "ads": "",
-      "data": "",
-      "permissions": ""
+      "ads": "无",
+      "data": "插件不采集任何数据",
+      "permissions": "无"
     },
     "npmurl": ""
   },
