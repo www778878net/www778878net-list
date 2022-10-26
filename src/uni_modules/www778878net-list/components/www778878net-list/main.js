@@ -21,6 +21,7 @@ export default {
 		topText:{type:String,default:'778878net荣誉出品(可替换这行字显示点有用的)'},
 		title:{type:String,default:'778878net列表控件'},
 		
+		isCanHelp:{type:Boolean,default:false},//是否允许帮助
 		isCanFind:{type:Boolean,default:false},//是否允许查找 
 		isCanAdd:{type:Boolean,default:false},//是否允许新增 
 		isRowModify:{type:Boolean,default:false},//是否允许行修改

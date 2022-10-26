@@ -6,7 +6,7 @@
 			:topText="topText" :listSet="listSet" :helptexts="helptexts" 
 			:isCanFind="isCanFind" :isCanAdd="isCanAdd"
 			:isRowModify="isRowModify" :isRowDel="isRowDel"
-			:title="title"
+			:title="title" :isCanHelp="isCanHelp"
 		   >
 			<template v-slot:find>
 				<view class="screen-box">
@@ -55,6 +55,7 @@
 				],
 			},
 			title: {type:String,default:'列表控件778878net'},
+			isCanHelp:{type:Boolean,default:true},//是否允许帮助
 			isCanFind:{type:Boolean,default:true},//是否允许查找
 			isCanAdd:{type:Boolean,default:true},//是否允许新增 
 			isRowModify:{type:Boolean,default:true},//是否允许行修改

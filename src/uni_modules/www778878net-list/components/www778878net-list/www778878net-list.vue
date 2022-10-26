@@ -4,7 +4,7 @@
 			:title="title" @clickLeft="back" />
 		<view class="header">
 			<view class="menu-box">
-				<button @click="helpClick" class="query-but" type="primary" >帮助</button>
+				<button v-if="isCanHelp" @click="helpClick" class="query-but" type="primary" >帮助</button>
 				<button v-if="isCanFind" @click="queryClick" class="query-but"   >查找</button>
 				<button v-if="isCanAdd" @click="formedit()" class="query-but"  >新增</button>
 			</view>
