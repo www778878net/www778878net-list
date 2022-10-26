@@ -42,6 +42,7 @@
 		,"uni-popup"
 		,"uni-forms"
 		,"uni-card"
+		,"uni-easyinput"
 	],
     "encrypt": [],
    "platforms": {
