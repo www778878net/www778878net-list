@@ -1,12 +1,11 @@
 <template>
-	<view class="page-content">
+	 
  
-		<www778878net-list ref="list78" @getdata="getdata"    
-			 :listSet="listSet"  
-		   >
-		 
-		</www778878net-list>
-	</view>
+	<www778878net-list ref="list78" @getdata="getdata"    
+		 :listSet="listSet"  
+	   > 
+	</www778878net-list>
+	 
 </template>
 
 <script  >

@@ -75,9 +75,6 @@ export default {
 			}
 			//if(this.isdebug)console.log(colstmp)
 			return colstmp
-		},
-		qqservicesurl(){
-			return "http://wpa.qq.com/msgrd?v=3&amp;uin="+this.qqservices+"&amp;site=qq&amp;menu=yes"
 		}
 	},
 	methods: {

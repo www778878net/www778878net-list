@@ -1,5 +1,5 @@
 <template>
-	<view class="page-content">
+	
 		
 		<www778878net-list ref="list78" @queryQuery="queryQuery" :cols="cols" :rules="rules"
 		   @getdata="getdata" @savedata="savedata" @delById="delById"
@@ -23,7 +23,7 @@
 				</view> 
 			</template>
 		</www778878net-list>
-	</view>
+
 </template>
 
 <script  >

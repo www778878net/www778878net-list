@@ -53,7 +53,7 @@
 		<uni-popup ref="popupQuery" type="bottom" :is-mask-click="true" safeArea backgroundColor="$uni-bg-color" >	
 			<slot name="find">
 			<view class="screen-box"> 
-				<button @click="queryQuery"   type="primary" >查找</button> 
+				<button @click="queryQueryIn"   type="primary" >查找</button> 
 			</view>
 			</slot>
 		</uni-popup>
