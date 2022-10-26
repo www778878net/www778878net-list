@@ -35,6 +35,14 @@
 <www778878net-list ref="list78" @getdata="getdata" :listSet="listSet"> 
 </www778878net-list>
 ```
+## 运行示例
+```ts
+git clone https://github.com/www778878net/www778878net-list
+yarn install
+yarn serve
+//open the url:
+//http://localhost:8081/
+```
 
 ## 在线体验DEMO: [http://www.778878.net/docs/#/www778878net-list/](http://www.778878.net/docs/#/www778878net-list/)
 ## 扫码体验
