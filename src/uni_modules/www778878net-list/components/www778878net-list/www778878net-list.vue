@@ -27,11 +27,13 @@
 									<text>{{item[rowset.colright.name]}}</text>
 								</view>
 							</view>
-							<view class="price-item">
-								<view   class="price-right"  >
+							<view class="price-item" >
+								<slot name="rowbotton" :item=item>
+								<view   class="price-right"   >
 									<button v-if="isRowModify" type="primary" @click="formedit(item)">修改</button>
 									<button v-if="isRowDel" type="warn" @click="formdel(item.id)">删除</button>
 								</view>
+								</slot>
 							</view>
 						</uni-card>
 					</template>
@@ -62,8 +64,9 @@
 			<view class="popup-set-box">
 				<uni-forms  ref="form78" :modelValue="formData"  :rules="rulesForm">
 					<scroll-view scroll-top="0" scroll-y="true" class="form-srcoll-box">						
-					 <uni-forms-item v-for="(item,index) in cols"   :label="item.head" :name="item.name" :key="index">
-						<uni-easyinput   class="type-input"  type="text" v-model="formData[item.name]" placeholder="请输入" />
+					 <uni-forms-item v-for="(item,index) in colsobj"   :label="item.head" :name="item.name" :key="index">
+						<uni-easyinput v-if="item.kind=='input'"   class="type-input"  type="text" v-model="formData[item.name]" placeholder="请输入" />
+						
 					</uni-forms-item>
 					</scroll-view>
 					<view class="uni-btn-v">

@@ -55,10 +55,18 @@ export default {
 						rule["errorMessage"]="请输入"+this.colsobj[item]["head"]
 						continue
 					}
+					if(rule["format"]){
+						rule["errorMessage"]=this.colsobj[item]["head"]+"限制类型为"+rule["format"]
+						continue;
+					}
 					if(rule["minLength"]){
 						rule["errorMessage"]=this.colsobj[item]["head"]+"长度在 "+rule["minLength"]+" 到 "+rule["maxLength"]+" 个字符"
 						continue
 					} 
+					if(rule["maximum"]){
+						rule["errorMessage"]=this.colsobj[item]["head"]+"数字介于 "+rule["maximum"]+" 到 "+rule["minimum"]+" "
+						continue
+					}
 				}
 			} 
 			return ruletmp
@@ -67,11 +75,12 @@ export default {
 		 * []转成{} 
 		 * item head换算 cols必须用数组 因为和后端有顺序约定
 		 */
-		colsobj(){
-		 
+		colsobj(){ 
 			let colstmp={}
 			for(let i =0;i<this.cols.length;i++){
 				colstmp[this.cols[i]["name"]]=this.cols[i]
+				if(!this.cols[i]["kind"])
+					colstmp[this.cols[i]["name"]]["kind"]="input"
 			}
 			//if(this.isdebug)console.log(colstmp)
 			return colstmp
