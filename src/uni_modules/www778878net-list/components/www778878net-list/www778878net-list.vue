@@ -65,8 +65,12 @@
 				<uni-forms  ref="form78" :modelValue="formData"  :rules="rulesForm">
 					<scroll-view scroll-top="0" scroll-y="true" class="form-srcoll-box">						
 					 <uni-forms-item v-for="(item,index) in colsobj"   :label="item.head" :name="item.name" :key="index">
-						<uni-easyinput v-if="item.kind=='input'"   class="type-input"  type="text" v-model="formData[item.name]" placeholder="请输入" />
-						
+						<uni-easyinput v-if="item.kind=='input'"   class="type-input"  
+						type="text" v-model="formData[item.name]" placeholder="请输入" />
+						<uni-data-select   v-if="item.kind=='select'"  
+						      v-model="formData[item.name]"
+						      :localdata="item.range"						      
+						    ></uni-data-select>
 					</uni-forms-item>
 					</scroll-view>
 					<view class="uni-btn-v">
