@@ -7,6 +7,7 @@
 				<button v-if="isCanHelp" @click="helpClick" class="query-but" type="primary" >帮助</button>
 				<button v-if="isCanFind" @click="queryClick" class="query-but"   >查找</button>
 				<button v-if="isCanAdd" @click="formedit()" class="query-but"  >新增</button>
+				<slot name="topbotton"  ></slot>
 			</view>
 			<view class="summary-box">
 				<text>{{topText}}</text> 
@@ -30,7 +31,7 @@
 							<view class="price-item" >
 								<slot name="rowbotton" :item=item>
 								<view   class="price-right"   >
-									<button v-if="isRowModify" type="primary" @click="formedit(item)">修改</button>
+									<button v-if="isRowModify"   @click="formedit(item)">修改</button>
 									<button v-if="isRowDel" type="warn" @click="formdel(item.id)">删除</button>
 								</view>
 								</slot>
