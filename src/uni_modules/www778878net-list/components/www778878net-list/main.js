@@ -77,6 +77,7 @@ export default {
 		 */
 		colsobj(){ 
 			let colstmp={}
+			if(this.cols )
 			for(let i =0;i<this.cols.length;i++){
 				colstmp[this.cols[i]["name"]]=this.cols[i]
 				if(!this.cols[i]["kind"])

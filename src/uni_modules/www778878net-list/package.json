@@ -1,7 +1,7 @@
 {
   "id": "www778878net-list",
   "displayName": "www778878net-list 低代码列表",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "List 低代码列表 ，帮助使用者快速构建列表。",
   "keywords": [
     "www778878net-list",
@@ -43,6 +43,7 @@
 		,"uni-forms"
 		,"uni-card"
 		,"uni-easyinput"
+		,"uni-data-select"
 	],
     "encrypt": [],
    "platforms": {

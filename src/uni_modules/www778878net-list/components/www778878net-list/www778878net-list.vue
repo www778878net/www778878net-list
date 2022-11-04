@@ -29,12 +29,12 @@
 								</view>
 							</view>
 							<view class="price-item" >
-								<slot name="rowbotton" :item=item>
+								<slot name="rowbotton" :item=item></slot>
 								<view   class="price-right"   >
 									<button v-if="isRowModify"   @click="formedit(item)">修改</button>
 									<button v-if="isRowDel" type="warn" @click="formdel(item.id)">删除</button>
 								</view>
-								</slot>
+								
 							</view>
 						</uni-card>
 					</template>
