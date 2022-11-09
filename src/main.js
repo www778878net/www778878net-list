@@ -22,11 +22,11 @@ const app = new Vue({
 app.$mount()
 
 //全局组件注册
- import lgLsit from './components/lg-list/lg-list';
- //import nav from './components/nav/nav';
- Vue.component({
-	 'lg-list':lgLsit,
-	 //'nav': nav,
-	 })
+ // import lgLsit from './components/lg-list/lg-list';
+ // //import nav from './components/nav/nav';
+ // Vue.component({
+	//  'lg-list':lgLsit,
+	 
+	//  })
 
  

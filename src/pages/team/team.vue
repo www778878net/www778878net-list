@@ -194,22 +194,21 @@
 		background-color: $uni-bg-color;
 	}
 	
-	
-	.menu-box{
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		padding: 10px;
-		button{
-			font-size: $uni-font-size-base;
-			width: 3rem;
-			height: 25px;
-			line-height: 25px;
-			padding: 0;
-			margin: 0;
-			margin-left: 6px;
-		}
-	}
+	// .menu-box{
+	// 	width: 100%;
+	// 	display: flex;
+	// 	flex-direction: row;
+	// 	padding: 10px;
+	// 	button{
+	// 		font-size: $uni-font-size-base;
+	// 		width: 3rem;
+	// 		height: 25px;
+	// 		line-height: 25px;
+	// 		padding: 0;
+	// 		margin: 0;
+	// 		margin-left: 6px;
+	// 	}
+	// }
 	//筛选板块
 	.screen-box{
 		width: 100%;

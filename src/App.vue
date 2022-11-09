@@ -132,4 +132,18 @@
 	}
 
 	/* #endif*/
+	
+	
+	/**以下自定义全局样式**/
+	.butmin{
+		font-size: $uni-font-size-base;
+		width: 3rem;
+		height: 25px;
+		line-height: 25px;
+		padding: 0;
+		margin: 0;
+		margin-left: 6px;
+	}
+	
+ 
 </style>
