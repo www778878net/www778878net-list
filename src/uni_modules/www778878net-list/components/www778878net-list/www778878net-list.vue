@@ -1,12 +1,14 @@
 <template>
 	<view class="page-content">
-		<uni-nav-bar dark :fixed="true" shadow background-color="#007AFF" status-bar left-icon="left"
-			:title="title" @clickLeft="back" />
+		<view>
+			<uni-nav-bar dark :fixed="true" shadow background-color="#007AFF" left-icon="left"
+				:title="title" @clickLeft="back" />
+		</view>
 		<view class="header">
 			<view class="menu-box">
-				<button v-if="isCanHelp" @click="helpClick" class="query-but" type="primary" >帮助</button>
-				<button v-if="isCanFind" @click="queryClick" class="query-but"   >查找</button>
-				<button v-if="isCanAdd" @click="formedit()" class="query-but"  >新增</button>
+				<button v-if="isCanHelp" @click="helpClick" class="query-but butmin" type="primary" >帮助</button>
+				<button v-if="isCanFind" @click="queryClick" class="query-but butmin"   >查找</button>
+				<button v-if="isCanAdd" @click="formedit()" class="query-but butmin"  >新增</button>
 				<slot name="topbotton"  ></slot>
 			</view>
 			<view class="summary-box">
@@ -15,7 +17,7 @@
 		</view>
 		<z-paging class="paging-box"  ref="paging" default-page-size="10" v-model="listData" @query="queryList">
 			<uni-list class="list-crad-box">
-				<uni-list-item :border="false" direction="column" v-for="item in listData" :key="item.id">
+				<uni-list-item :border="false"  direction="column" v-for="item in listData" :key="item.id">
 					<template direction="column" v-slot:body>
 						<uni-card>
 							<view class="price-item" v-for="(rowset,index) in listSet" :key="index">
@@ -29,10 +31,10 @@
 								</view>
 							</view>
 							<view class="price-item" >
-								<slot name="rowbotton" :item=item></slot>
-								<view   class="price-right"   >
-									<button v-if="isRowModify"   @click="formedit(item)">修改</button>
-									<button v-if="isRowDel" type="warn" @click="formdel(item.id)">删除</button>
+								  <slot name="rowbotton" :item="item"></slot>  
+								<view class="price-right" style="float: right;">
+									<button v-if="isRowModify" class="butmin"  @click="formedit(item)">修改</button>
+									<button v-if="isRowDel" class="butmin" type="warn" @click="formdel(item.id)">删除</button>
 								</view>
 								
 							</view>
@@ -48,7 +50,7 @@
 					{{rowtext}}
 				</view> 
 				<view class="help-row">
-					<a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=IGEbSpBveycfGNzhBnAdyS3eU-rqXf3d&jump_from=webapi&authKey=tfpHY+ASwWfJCvBuiW6c+Ifrsai8zJBPfLGr83M6r67OJxODwaKQx1O0oHC4KCS9"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="7788开源用户群" title="7788开源用户群"></a>
+					<a class="link-img" target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=IGEbSpBveycfGNzhBnAdyS3eU-rqXf3d&jump_from=webapi&authKey=tfpHY+ASwWfJCvBuiW6c+Ifrsai8zJBPfLGr83M6r67OJxODwaKQx1O0oHC4KCS9"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="7788开源用户群" title="7788开源用户群"></a>
 				</view>
 			</view>
 		</uni-popup>
@@ -56,7 +58,7 @@
 		<uni-popup ref="popupQuery" type="bottom" :is-mask-click="true" safeArea backgroundColor="$uni-bg-color" >	
 			<slot name="find">
 			<view class="screen-box"> 
-				<button @click="queryQueryIn"   type="primary" >查找</button> 
+					<button @click="queryQueryIn" class="butmin" type="primary" >查找</button>
 			</view>
 			</slot>
 		</uni-popup>
@@ -90,6 +92,11 @@ export default {
 </script>
 <script src="./main.js" />
 <style lang="scss">
+
+	/* #ifdef H5 */
+
+	/*  #endif*/
+	
 	.page-content {
 		width: 100%;
 		height: 100%;
@@ -108,6 +115,9 @@ export default {
 			border: 1px solid $uni-border-color;
 			background-color: $uni-bg-color;
 		}
+		.uni-status-bar{
+			display: none;
+		}
 		
 		//按钮菜单栏
 		.header{
@@ -122,32 +132,42 @@ export default {
 				flex-direction: row;
 				padding: 10px;
 				border: none;
-				button{
-					font-size: $uni-font-size-base;
-					width: 3rem;
-					height: 25px;
-					line-height: 25px;
-					padding: 0;
-					margin: 0;
-					margin-left: 6px;
-				}
 			}
 			.summary-box{
 				padding: 0 0 10px 15px;
 			}
 		}
+		.butmin{
+			font-size: $uni-font-size-base;
+			width: 3rem;
+			height: 25px;
+			line-height: 25px;
+			padding: 0;
+			margin: 0;
+			margin-left: 6px;
+		}
 		
-		
+	 
 		//列表容器
+		//uni-list<list-crad-box 
+
 		.list-crad-box{
 			width: 100%;
-			::v-deep .uni-list-item__container{
+			.uni-list {
+		     padding-top: 7rem;
+			}
+			 .uni-list-item__container{
 				margin: 0 !important;
 				padding: 0 !important;
-			}
-			::v-deep .uni-card{
+			 } 
+			 //列表间距
+			 .uni-card{
 				border: none;
-				margin-bottom: 3px !important;
+				margin: 0px 15px !important;
+			 }
+			::v-deep .uni-card,uni-card{
+				// border: none;
+				// margin-bottom: 3px !important;
 				uni-text{
 					font-size: $uni-font-size-sm;
 				}
@@ -185,6 +205,10 @@ export default {
 			.help-row{
 				height: 30px;
 				line-height: 30px;
+				image,img{
+					width: 90px;
+					height: 22px;
+				}
 			}
 		}
 		
