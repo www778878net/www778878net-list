@@ -31,7 +31,7 @@
 								</view>
 							</view>
 							<view class="price-item" >
-								<!-- <slot name="rowbotton" :item="item"></slot> -->
+								<slot name="rowbotton" :item="item"></slot> 
 								<view class="price-right" style="float: right;">
 									<button v-if="isRowModify" class="butmin"  @click="formedit(item)">修改</button>
 									<button v-if="isRowDel" class="butmin" type="warn" @click="formdel(item.id)">删除</button>
