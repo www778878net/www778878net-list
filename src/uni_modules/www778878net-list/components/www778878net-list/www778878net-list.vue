@@ -31,7 +31,7 @@
 								</view>
 							</view>
 							<view class="price-item" >
-								<slot name="rowbotton" :item="item"></slot>
+								  <slot name="rowbotton" :item="item"></slot>  
 								<view class="price-right" style="float: right;">
 									<button v-if="isRowModify" class="butmin"  @click="formedit(item)">修改</button>
 									<button v-if="isRowDel" class="butmin" type="warn" @click="formdel(item.id)">删除</button>
@@ -74,6 +74,9 @@
 						      v-model="formData[item.name]"
 						      :localdata="item.range"						      
 						    ></uni-data-select>
+						<uni-datetime-picker focus class="uni-input query-input"  type="date" :clear-icon="false" 
+						v-if="item.kind=='date'"  
+						v-model="formData[item.name]"  />	
 					</uni-forms-item>
 					</scroll-view>
 					<view class="uni-btn-v">
