@@ -17,7 +17,7 @@
 		</view>
 		<z-paging class="paging-box"  ref="paging" default-page-size="10" v-model="listData" @query="queryList">
 			<uni-list class="list-crad-box">
-				<uni-list-item :border="false" direction="column" v-for="item in listData" :key="item.id">
+				<uni-list-item :border="false"  direction="column" v-for="item in listData" :key="item.id">
 					<template direction="column" v-slot:body>
 						<uni-card>
 							<view class="price-item" v-for="(rowset,index) in listSet" :key="index">
@@ -31,7 +31,7 @@
 								</view>
 							</view>
 							<view class="price-item" >
-								<slot name="rowbotton" :item="item"></slot> 
+								<slot name="rowbotton" :item="item"></slot>
 								<view class="price-right" style="float: right;">
 									<button v-if="isRowModify" class="butmin"  @click="formedit(item)">修改</button>
 									<button v-if="isRowDel" class="butmin" type="warn" @click="formdel(item.id)">删除</button>
@@ -92,6 +92,11 @@ export default {
 </script>
 <script src="./main.js" />
 <style lang="scss">
+
+	/* #ifdef H5 */
+
+	/*  #endif*/
+	
 	.page-content {
 		width: 100%;
 		height: 100%;
@@ -144,16 +149,21 @@ export default {
 		
 	 
 		//列表容器
+		//uni-list<list-crad-box 
+
 		.list-crad-box{
 			width: 100%;
-			 .uni-list{padding-top: 7rem;}
+			.uni-list {
+		     padding-top: 7rem;
+			}
 			 .uni-list-item__container{
 				margin: 0 !important;
 				padding: 0 !important;
 			 } 
+			 //列表间距
 			 .uni-card{
 				border: none;
-				margin-bottom: 3px !important;
+				margin: 0px 15px !important;
 			 }
 			::v-deep .uni-card,uni-card{
 				// border: none;
